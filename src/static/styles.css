@@ -88,12 +88,15 @@ section h3 {
 }
 
 .participants-list {
-  list-style: disc inside;
+  list-style: none; /* hide default bullets */
   margin: 0;
-  padding: 0 8px;
+  padding: 0;
 }
 
 .participants-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background: #ffffff;
   border: 1px solid #f0f0f0;
   padding: 6px 10px;
@@ -102,6 +105,25 @@ section h3 {
   font-size: 14px;
   color: #333;
   box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+}
+
+.participants-list li .participant-email {
+  word-break: break-word;
+}
+
+/* Remove / delete button next to each participant */
+.remove-participant {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.remove-participant:hover {
+  background: rgba(198,40,40,0.07);
 }
 
 .no-participants {
